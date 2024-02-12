@@ -1,0 +1,59 @@
+---
+import Badge from "./Badge.astro";
+
+const Experience = [
+	{
+		date: 'Actualmente...',
+		title: 'Freelance developer',
+		description: "Desarrollando webs y aplicaciones para empresas y agencias con tecnologias como Wordpress, NextJS, Astro, React y muchas más. Además continuo mis estudios en la Universidad Tecnologica Nacional.",
+		link: '#',
+		span: 'Contratame para desarrollar tu idea'
+	},
+	{
+		date: 'Julio 2023',
+		title: 'Estudiante de programación en la Universidad Tecnologica Nacional',
+		description: 'Comienzo cursado de tecnicatura en programación en la UTN, universidad especializada en ingenierias, que se encuentra entre las 100 mejores de America Latina segun Quacquarelli Symonds.',
+		link: '#'
+	},
+	{
+		date: 'Julio 2022',
+		title: 'Desarrollador web en MyDesign',
+		description: 'Desarrollo de landings, sitios institucionales y tiendas en linea a medida en Wordpress. Usando PHP creamos plantillas personalizadas y hacemos que los sitios sean 100% autoadministrables.',
+		link: '#'
+	},
+	{
+		date: 'Junio 2022',
+		title: 'Desarrollador web en Entropia',
+		description: 'Desarrollo de sitios y aplicaciones web a medida haciendo uso de multiples tecnologias que varian segun el proyecto.',
+		link: '#'
+	},
+
+]
+---
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">  
+	{
+		Experience.map((exp) => (
+			<li class="mb-10 ms-6">            
+				<span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+					<svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+						<path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+					</svg>
+				</span>
+				<h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">{exp.date}</h3>
+				<time class="flex flex-col lg:flex-row items-start lg:items-center gap-2 lg:gap-3 mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+					{exp.title}
+					{exp.span ? (
+						<a href="https://www.linkedin.com/in/tomas-costa-0517672a5" class="flex justify-center items-center"><Badge>{exp.span}</Badge></a>
+					) : (
+						''
+					) 
+				}
+				</time>
+				<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">{exp.description}</p>
+			</li>
+		))
+	}
+</ol>
+
