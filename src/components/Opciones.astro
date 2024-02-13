@@ -8,7 +8,7 @@ const Options = [
 		desc: '...',
 		checks: [
 					"Diseño personalizado", 
-					"12 secciones",
+					"10 secciones",
 					"Formulario integrado",
 					"Optimizado para SEO",
 					"3 Reuniones de revisión",
@@ -16,7 +16,8 @@ const Options = [
 					"",
 					""
 				],
-		basePrice: 160000
+		basePrice: 200000,
+		discountPrice: 160000
 	},
 	{
 		img: 'https://assets-global.website-files.com/5b5729421aca332c60585f78/63f5fa23da820b87c87958be_61ba503872080311dde1ea56_long-form-landing-page-examples.png',
@@ -32,7 +33,8 @@ const Options = [
 					"Blog",
 					"6 Reuniones de revisión",
 				],
-		basePrice: 400000
+		basePrice: 400000,
+		discountPrice: 350000
 	},
 ]
 ---
@@ -40,7 +42,7 @@ const Options = [
 <div class="grid grid-cols-2 gap-3">
 	{
 		Options.map((option) => (
-			<div class="rounded p-4 bg-gradient-to-br from-neutral-400/20 to-neutral-700/30">
+			<div class="rounded p-4 bg-gradient-to-br from-neutral-400/20 to-neutral-700/30 hover:scale-[101%] transition">
 				<img class="rounded"
 					src={option.img}
 					alt={option.title} />
@@ -53,9 +55,13 @@ const Options = [
 						))
 					}
 				</ul>
-				<label><input type="checkbox" name="" id=""> Ya cuento con diseño</label>
-				<span class="block mt-2 mb-5 font-bold">${option.basePrice}</span>
+				<label><input type="checkbox" name="" id="" /> Ya cuento con diseño</label>
+				<div class="flex gap-3">
+					<span class="block mt-2 mb-5 font-medium line-through text-white/70">${option.basePrice}</span>	
+					<span class="block mt-2 mb-5 font-bold">${option.discountPrice}</span>	
+				</div>
 				<a href="#!" class=""><Badge class="text-[15px] px-4 py-2 block w-full text-center font-bold">Comprar</Badge></a>
+				<p class="mt-3 text-xs text-white/70">Aclaración: el pago se realiza en 2 etapas, una para dar inicio al proyecto y la segunda una vez finalizado para la entrega de este.</p>
 			</div>
 		))
 	}
