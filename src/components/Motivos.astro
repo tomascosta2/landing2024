@@ -1,0 +1,47 @@
+---
+const Motives = [
+	{
+		title: 'Lo ultimo en tecnología',
+		desc: `Todos nuestros desarrollos 
+			usan las ultimas y mejores tecnologias del mercado 
+			para asegurar velocidad, escalabilidad y seguridad 
+			a nuestros clientes.`,
+		img: ''
+	},
+	{
+		title: 'Diseños "Usuario a Cliente"',
+		desc: `Diseños pensados para aumentar al maximo la tasa 
+			de conversión de los sitios.`,
+		img: ''
+	},
+	{
+		title: 'Lo ultimo en tecnología',
+		desc: `Todos nuestros desarrollos 
+			usan las ultimas y mejores tecnologias del mercado 
+			para asegurar velocidad, escalavilidad y seguridad 
+			a nuestros clientes`,
+		img: ''
+	},
+	{
+		title: 'Lo ultimo en tecnología',
+		desc: `Todos nuestros desarrollos 
+			usan las ultimas y mejores tecnologias del mercado 
+			para asegurar velocidad, escalavilidad y seguridad 
+			a nuestros clientes`,
+		img: ''
+	}
+]
+---
+
+<div class="grid grid-cols-1 gap-3">
+	{
+		Motives.map((motive) => (
+			<div class="lg:h-[150px] rounded p-4 bg-gradient-to-br from-neutral-400/20 to-neutral-700/30">
+				<div class="w-[70%]">
+					<h3 class="mb-2 font-bold text-lg">{motive.title}</h3>
+					<p class="text-white/45">{motive.desc}</p>
+				</div>
+			</div>
+		))
+	}
+</div>

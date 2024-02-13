@@ -7,6 +7,8 @@ import GitHubIcon from '../components/icons/GitHub.astro';
 import MailIcon from '../components/icons/Mail.astro';
 import Experiencia from '../components/Experiencia.astro';
 import Proyectos from '../components/Proyectos.astro';
+import Motivos from '../components/Motivos.astro';
+import Opciones from '../components/Opciones.astro';
 ---
 
 <Layout 
@@ -31,9 +33,26 @@ import Proyectos from '../components/Proyectos.astro';
 			<h2 class="text-4xl font-bold pb-8 text-center">Experiencia</h2>
 			<Experiencia />
 		</section>
+		<section class="lg:w-[740px] mx-auto px-4 lg:px-0 pt-[40px] pb-[4rem] gap-4">
+			<h2 class="text-4xl font-bold pb-8 text-center">Por que nosotros...</h2>
+			<Motivos />
+		</section>
 		<section class="lg:w-[740px] mx-auto px-4 lg:px-0 pt-[40px] pb-[2rem] gap-4">
-			<h2 class="text-4xl font-bold pb-10 text-center">Proyectos</h2>
+			<h2 class="text-4xl font-bold mb-4 text-center">Proyectos</h2>
+			<p class="text-center text-white/80 pb-10">
+				Estos son algunos de los proyectos en los que hemos trabajado. Si queres que
+				el tuyo sea el proximo vayamos a ver las <a href="#">opciones</a>!
+			</p>
 			<Proyectos />
+		</section>
+		<section class="lg:w-[740px] mx-auto px-4 lg:px-0 pt-[40px] pb-[2rem] gap-4">
+			<h2 class="text-4xl font-bold mb-4 text-center">Que estas buscando</h2>
+			<p class="text-center text-white/80 pb-10">
+				Si todavia no sabes que tipo de desarrollo necesitas en la seccion de 
+				preguntas frecuentes te ayudamos a descubrirlo! 
+				De lo contrario ya podemos empezar a trabajar...
+			</p>
+			<Opciones />
 		</section>
 	</main>
 
