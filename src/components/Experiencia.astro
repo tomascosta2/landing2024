@@ -6,7 +6,7 @@ const Experience = [
 		date: 'Actualmente...',
 		title: 'Freelance developer',
 		description: "Desarrollando webs y aplicaciones con equipos de profesionales, para distintas empresas y agencias, haciendo uso de tecnologias como Wordpress, NextJS, Astro, React y muchas más. Además continuo mis estudios en la Universidad Tecnologica Nacional.",
-		link: '#',
+		link: '#opciones',
 		span: 'Contratanos para desarrollar tu idea'
 	},
 	{
@@ -45,7 +45,7 @@ const Experience = [
 				<time class="flex flex-col lg:flex-row items-start lg:items-center gap-2 lg:gap-3 mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
 					{exp.title}
 					{exp.span ? (
-						<a href="https://www.linkedin.com/in/tomas-costa-0517672a5" class="flex justify-center items-center"><Badge class="font-medium text-xs">{exp.span}</Badge></a>
+						<a href={exp.link} class="flex justify-center items-center"><Badge class="font-medium text-xs">{exp.span}</Badge></a>
 					) : (
 						''
 					) 

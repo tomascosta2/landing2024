@@ -18,11 +18,11 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<header class="flex justify-center items-center py-4 px-4 lg:px-0 w-full mx-auto fixed backdrop-blur-lg">
-			<nav class="flex  gap-x-[20px] sm:gap-x-[40px] text-[12px] sm:text-[16px]">
-				<a class="opacity-80 hover:opacity-100" href="#">Experiencia</a>
-				<a class="opacity-80 hover:opacity-100" href="#">Por que elegirnos</a>
-				<a class="opacity-80 hover:opacity-100" href="#">Desarrollos</a>
+		<header class="flex justify-end md:justify-center items-center py-4 px-4 lg:px-0 w-full mx-auto fixed backdrop-blur-lg">
+			<nav class="flex gap-[40px] text-[16px]">
+				<a class="opacity-80 hover:opacity-100 hidden md:block" href="#">Experiencia</a>
+				<a class="opacity-80 hover:opacity-100 hidden md:block" href="#">Por que elegirnos</a>
+				<a class="opacity-80 hover:opacity-100 hidden md:block" href="#">Desarrollos</a>
 				<a class="opacity-80 hover:opacity-100" href="#">Solicitar proyecto</a>
 			</nav>
 		</header>

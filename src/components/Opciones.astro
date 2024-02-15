@@ -5,24 +5,20 @@ const Options = [
 	{
 		img: 'https://assets-global.website-files.com/5b5729421aca332c60585f78/63f5fa23da820b87c87958be_61ba503872080311dde1ea56_long-form-landing-page-examples.png',
 		title: 'Landing Page',
-		desc: '...',
 		checks: [
 					"Diseño personalizado", 
 					"10 secciones",
 					"Formulario integrado",
 					"Optimizado para SEO",
 					"3 Reuniones de revisión",
-					"",
-					"",
-					""
 				],
 		basePrice: 200000,
-		discountPrice: 160000
+		discountPrice: 160000,
+		mpLink: 'https://mpago.la/1XLLQyT'
 	},
 	{
 		img: 'https://assets-global.website-files.com/5b5729421aca332c60585f78/63f5fa23da820b87c87958be_61ba503872080311dde1ea56_long-form-landing-page-examples.png',
 		title: 'eCommerce',
-		desc: '...',
 		checks: [
 					"Diseño personalizado", 
 					"6 páginas ademas de las basicas",
@@ -34,12 +30,47 @@ const Options = [
 					"6 Reuniones de revisión",
 				],
 		basePrice: 400000,
-		discountPrice: 350000
+		discountPrice: 350000,
+		mpLink: 'https://mpago.la/1XLLQyT'
+	},
+	{
+		img: 'https://assets-global.website-files.com/5b5729421aca332c60585f78/63f5fa23da820b87c87958be_61ba503872080311dde1ea56_long-form-landing-page-examples.png',
+		title: 'Web Institucional',
+		checks: [
+					"Diseño personalizado", 
+					"6 páginas ademas de las basicas",
+					"Formulario integrado",
+					"Optimizado para SEO",
+					"10 plugis a eleccion",
+					"Hasta 50.000 productos",
+					"Blog",
+					"6 Reuniones de revisión",
+				],
+		basePrice: 400000,
+		discountPrice: 350000,
+		mpLink: 'https://mpago.la/1XLLQyT'
+	},
+	{
+		img: 'https://assets-global.website-files.com/5b5729421aca332c60585f78/63f5fa23da820b87c87958be_61ba503872080311dde1ea56_long-form-landing-page-examples.png',
+		title: 'eCommerce',
+		checks: [
+					"Diseño personalizado", 
+					"6 páginas ademas de las basicas",
+					"Formulario integrado",
+					"Optimizado para SEO",
+					"10 plugis a eleccion",
+					"Hasta 50.000 productos",
+					"Blog",
+					"6 Reuniones de revisión",
+				],
+		basePrice: 400000,
+		discountPrice: 350000,
+		mpLink: 'https://mpago.la/1XLLQyT'
 	},
 ]
 ---
 
-<div class="grid grid-cols-2 gap-3">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
 	{
 		Options.map((option) => (
 			<div class="rounded p-4 bg-gradient-to-br from-neutral-400/20 to-neutral-700/30 hover:scale-[101%] transition">
@@ -47,21 +78,21 @@ const Options = [
 					src={option.img}
 					alt={option.title} />
 				<h2 class="my-2 font-bold text-xl">{option.title}</h2>
-				<p class="text-white/70">{option.desc}</p>
-				<ul class="py-3 list-disc list-inside">
+				<ul class="py-3 list-disc list-inside h-fit md:h-[216px]">
 					{
 						option.checks.map((check) => (
 							<li>{check}</li>
 						))
 					}
 				</ul>
-				<label><input type="checkbox" name="" id="" /> Ya cuento con diseño</label>
+				<label><input type="checkbox" name="" id="" onchange="" /> Ya cuento con diseño</label>
 				<div class="flex gap-3">
 					<span class="block mt-2 mb-5 font-medium line-through text-white/70">${option.basePrice}</span>	
 					<span class="block mt-2 mb-5 font-bold">${option.discountPrice}</span>	
 				</div>
-				<a href="#!" class=""><Badge class="text-[15px] px-4 py-2 block w-full text-center font-bold">Comprar</Badge></a>
+				<a href={option.mpLink}><Badge class="text-[15px] px-4 py-2 block w-full text-center font-bold">Comprar</Badge></a>
 				<p class="mt-3 text-xs text-white/70">Aclaración: el pago se realiza en 2 etapas, una para dar inicio al proyecto y la segunda una vez finalizado para la entrega de este.</p>
 			</div>
 		))
 	}
+</div>
