@@ -3,13 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import '@fontsource-variable/onest';
 import SocialPill from '../components/SocialPill.astro';
 import LinkedinIcon from '../components/icons/Linkedin.astro';
-import GitHubIcon from '../components/icons/GitHub.astro';
 import MailIcon from '../components/icons/Mail.astro';
 import Experiencia from '../components/Experiencia.astro';
 import Proyectos from '../components/Proyectos.astro';
 import Motivos from '../components/Motivos.astro';
-import Opciones from '../components/Opciones.astro';
-import Preguntas from '../components/Preguntas.astro';
 ---
 
 <Layout 
@@ -18,16 +15,15 @@ import Preguntas from '../components/Preguntas.astro';
 >
 	<main>
 		<section class="w-full lg:w-[740px] mx-auto pt-[180px] gap-4 px-4 lg:px-0">
-			<h1 class="text-white text-4xl lg:text-5xl font-bold flex gap-4 pb-8">Desarrollos web a medida</h1>
-			<h2 class="text-2xl text-wrap">
+			<h1 class="text-white text-4xl lg:text-5xl font-bold text-center pb-8">Desarrollos web a medida</h1>
+			<h2 class="text-2xl text-wrap text-center">
 				<span class="opacity-80">Alcanza tus metas con nuestros servicios de </span> 
 				<span class="text-red-200/90">desarrollo especializado</span>
 				<span class="text-yellow-200/90">en crear aplicaciones únicas.</span>
 			</h2>
-			<nav class="flex flex-wrap gap-4 mt-8">
+			<nav class="flex flex-wrap justify-center gap-4 mt-8">
 				<SocialPill class="cursor-pointer" href="#opciones">Solicitar proyecto</SocialPill>
 				<SocialPill class="cursor-pointer" target="_blank" href="https://www.linkedin.com/in/tomas-costa-0517672a5"><LinkedinIcon class="size-5" />LinkedIn</SocialPill>
-				<!-- <SocialPill class="cursor-pointer" target="_blank" href="/"><GitHubIcon class="size-5" />GitHub</SocialPill> -->
 				<SocialPill class="cursor-pointer" target="_blank" href="mailto:tomascostapp@gmail.com"><MailIcon class="size-5" />tomascostapp@gmail.com</SocialPill>
 			</nav>
 		</section>
@@ -36,7 +32,7 @@ import Preguntas from '../components/Preguntas.astro';
 			<Experiencia />
 		</section>
 		<section class="lg:w-[740px] mx-auto px-4 lg:px-0 pt-[40px] pb-[4rem] gap-4">
-			<h2 class="text-4xl font-bold pb-8 text-center">Por que nosotros...</h2>
+			<h2 class="text-4xl font-bold pb-8 text-center">Desarrollos de primera</h2>
 			<Motivos />
 		</section>
 		<section class="lg:w-[740px] mx-auto px-4 lg:px-0 pt-[40px] gap-4">
@@ -47,34 +43,15 @@ import Preguntas from '../components/Preguntas.astro';
 			</p>
 			<Proyectos />
 		</section>
-		<section id="opciones" class="lg:w-[740px] mx-auto px-4 lg:px-0 pt-[72px] gap-4">
-			<h2 class="text-4xl font-bold mb-4 text-center">Que estas buscando</h2>
-			<p class="text-center text-white/80 pb-10">
-				Si todavia no sabes que tipo de desarrollo necesitas en la seccion de 
-				preguntas frecuentes te ayudamos a descubrirlo! 
-				De lo contrario ya podemos empezar a trabajar...
-			</p>
-			<Opciones />
-		</section>
-		<section class="lg:w-[740px] mx-auto px-4 lg:px-0 pt-[72px] pb-[2rem] gap-4">
-			<h2 class="text-4xl font-bold mb-4 text-center">Revende nuestros desarrollos</h2>
-			<p class="text-center text-white/80 pb-10">
-				¿Sos diseñador, experto en marketing o agencia y te gustaria ofrecer desarrollos web a 
-				tus clientes? Amplia tus servicios y beneficios brindando desarrollos a medida
-				a tus clientes.
-			</p>
-			<Preguntas />
-		</section>
-		<section class="lg:w-[740px] mx-auto px-4 lg:px-0 pt-[72px] pb-[2rem] gap-4">
-			<h2 class="text-4xl font-bold mb-4 text-center">Preguntas frecuentes</h2>
-			<p class="text-center text-white/80 pb-10">
-				...
-			</p>
-			<Preguntas />
+		<section class="lg:w-[740px] mx-auto px-4 lg:px-0 pt-[40px] gap-4">
+			<div class="rounded bg-neutral-600 p-[40px]">
+				<h2 class="text-4xl text-neutral-100 font-bold text-center mb-8">Cambiar este titulo por uno EXCELENTE</h2>
+				<a href="#!" class="rounded font-bold block w-fit mx-auto">CTA Excelente</a>
+			</div>
 		</section>
 	</main>
 
-	<footer class="pt-6 pb-10 flex justify-center">
+	<footer class="py-10 flex justify-center">
 		<h2 class="text-white/80 hover:text-white">Tomás Costa - Todos los derechos reservados</h2>
 	</footer>
 </Layout>

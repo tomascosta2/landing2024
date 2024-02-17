@@ -1,34 +1,28 @@
 ---
 const Motives = [
 	{
-		title: 'Lo ultimo en tecnología',
-		desc: `Todos nuestros desarrollos 
-			usan las ultimas y mejores tecnologias del mercado 
-			para asegurar velocidad, escalabilidad y seguridad 
-			a nuestros clientes.`,
-		img: ''
+		title: 'Lo último en tecnología',
+		desc: `Todos nuestros desarrollos usan las últimas y mejores tecnologías del mercado 
+				para asegurar velocidad, escalabilidad y seguridad a nuestros clientes.`,
+		img: '/imgs/tomas-costa-tecnologias.png'
 	},
 	{
 		title: 'Diseños "Usuario a Cliente"',
-		desc: `Diseños pensados para aumentar al maximo la tasa 
+		desc: `Diseños pensados para aumentar al máximo la tasa 
 			de conversión de los sitios.`,
-		img: ''
+		img: '/imgs/tomas-costa-diseños.png'
 	},
 	{
-		title: 'Lo ultimo en tecnología',
-		desc: `Todos nuestros desarrollos 
-			usan las ultimas y mejores tecnologias del mercado 
-			para asegurar velocidad, escalavilidad y seguridad 
-			a nuestros clientes`,
-		img: ''
+		title: 'Sitios desde cero',
+		desc: `Nada de plantillas o sitios pre desarrollados, desarrollamos
+			todos nuestros sitios desde cero.`,
+		img: '/imgs/tomas-costa-desarrollo.png'
 	},
 	{
-		title: 'Lo ultimo en tecnología',
-		desc: `Todos nuestros desarrollos 
-			usan las ultimas y mejores tecnologias del mercado 
-			para asegurar velocidad, escalavilidad y seguridad 
-			a nuestros clientes`,
-		img: ''
+		title: '100% Responsive',
+		desc: `Diseñamos y desarrollamos el 100% de nuestros sitios para que se adapten
+			a todo tipo de dispositivos.`,
+		img: '/imgs/tomas-costa-desarrollo.png'
 	}
 ]
 ---
@@ -36,7 +30,7 @@ const Motives = [
 <div class="grid grid-cols-1 gap-3">
 	{
 		Motives.map((motive) => (
-			<div class="lg:h-[150px] rounded p-4 border border-white/10 bg-gradient-to-br from-neutral-400/5 to-neutral-700/10 hover:from-neutral-100/5 hover:to-neutral-100/5 hover:scale-[101%] transition">
+			<div class="flex items-center gap-8 lg:h-[150px] rounded p-4 border border-white/10 bg-gradient-to-br from-neutral-400/5 to-neutral-700/10 hover:from-neutral-100/5 hover:to-neutral-100/5 hover:scale-[101%] transition">
 				<div class="w-[70%]">
 					<h3 class="mb-2 font-bold text-lg">{motive.title}</h3>
 					<p class="text-white/45">{motive.desc}</p>

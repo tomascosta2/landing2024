@@ -12,9 +12,9 @@ const Options = [
 					"Optimizado para SEO",
 					"3 Reuniones de revisión",
 				],
-		basePrice: 200000,
-		discountPrice: 160000,
-		mpLink: 'https://mpago.la/1XLLQyT'
+		rangeLow: '$120.000 ars',
+		rangeHigh: '$160.000 ars',
+		link: 'https://api.whatsapp.com/send?phone=542616841853&text=Hola%20Tom%C3%A1s!%20Quiero%20una%20landing%20page%20a%20medida%20para%20mi%20empresa%20%F0%9F%92%AA'
 	},
 	{
 		img: 'https://assets-global.website-files.com/5b5729421aca332c60585f78/63f5fa23da820b87c87958be_61ba503872080311dde1ea56_long-form-landing-page-examples.png',
@@ -29,43 +29,35 @@ const Options = [
 					"Blog",
 					"6 Reuniones de revisión",
 				],
-		basePrice: 400000,
-		discountPrice: 350000,
-		mpLink: 'https://mpago.la/1XLLQyT'
+		rangeLow: '$350.000 ars',
+		rangeHigh: '$450.000 ars',
+		link: 'https://api.whatsapp.com/send?phone=542616841853&text=Hola%20Tom%C3%A1s!%20Quiero%20un%20eCommerce%20a%20medida%20para%20mi%20empresa%20%F0%9F%92%AA'
 	},
 	{
 		img: 'https://assets-global.website-files.com/5b5729421aca332c60585f78/63f5fa23da820b87c87958be_61ba503872080311dde1ea56_long-form-landing-page-examples.png',
 		title: 'Web Institucional',
 		checks: [
 					"Diseño personalizado", 
-					"6 páginas ademas de las basicas",
+					"10 páginas",
 					"Formulario integrado",
 					"Optimizado para SEO",
 					"10 plugis a eleccion",
-					"Hasta 50.000 productos",
 					"Blog",
 					"6 Reuniones de revisión",
 				],
-		basePrice: 400000,
-		discountPrice: 350000,
-		mpLink: 'https://mpago.la/1XLLQyT'
+		rangeLow: '$250.000 ars',
+		rangeHigh: '$350.000 ars',
+		link: 'https://api.whatsapp.com/send?phone=542616841853&text=Hola%20Tom%C3%A1s!%20Quiero%20una%20web%20institucional%20a%20medida%20para%20mi%20empresa%20%F0%9F%92%AA'
 	},
 	{
 		img: 'https://assets-global.website-files.com/5b5729421aca332c60585f78/63f5fa23da820b87c87958be_61ba503872080311dde1ea56_long-form-landing-page-examples.png',
-		title: 'eCommerce',
+		title: 'Sistema a medida',
 		checks: [
-					"Diseño personalizado", 
-					"6 páginas ademas de las basicas",
-					"Formulario integrado",
-					"Optimizado para SEO",
-					"10 plugis a eleccion",
-					"Hasta 50.000 productos",
-					"Blog",
-					"6 Reuniones de revisión",
+					"Sin limite de reuniones",
 				],
-		basePrice: 400000,
-		discountPrice: 350000,
-		mpLink: 'https://mpago.la/1XLLQyT'
+		rangeLow: '$400 usd',
+		rangeHigh: '$5.000 usd',
+		link: 'https://api.whatsapp.com/send?phone=542616841853&text=Hola%20Tom%C3%A1s!%20Quiero%20un%20sistema%20a%20medida%20para%20mi%20empresa%20%F0%9F%92%AA'
 	},
 ]
 ---
@@ -85,12 +77,10 @@ const Options = [
 						))
 					}
 				</ul>
-				<label><input type="checkbox" name="" id="" onchange="" /> Ya cuento con diseño</label>
-				<div class="flex gap-3">
-					<span class="block mt-2 mb-5 font-medium line-through text-white/70">${option.basePrice}</span>	
-					<span class="block mt-2 mb-5 font-bold">${option.discountPrice}</span>	
+				<div class="flex gap-3 mt-2 mb-5 font-bold">
+					<span>{option.rangeLow}</span> - <span>{option.rangeHigh}</span>	
 				</div>
-				<a href={option.mpLink}><Badge class="text-[15px] px-4 py-2 block w-full text-center font-bold">Comprar</Badge></a>
+				<a href={option.link} target="_blank"><Badge class="text-[15px] px-4 py-2 block w-full text-center font-bold">Comprar</Badge></a>
 				<p class="mt-3 text-xs text-white/70">Aclaración: el pago se realiza en 2 etapas, una para dar inicio al proyecto y la segunda una vez finalizado para la entrega de este.</p>
 			</div>
 		))
