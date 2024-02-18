@@ -1,0 +1,56 @@
+---
+import More from '../components/icons/More.astro';
+
+const Items = [
+	{
+		pregunta: `Qué servicios ofreces`,
+		respuesta: `Nos especializamos en el desarrollo de sitios y aplicaciones web.`
+	},
+	{
+		pregunta: `Necesitas diseño para comenzar un proyecto`,
+		respuesta: `No, nos encargarnos del diseño en caso del cliente de no contar con este.`
+	},
+	{
+		pregunta: `Cuanto cuestan los desarrollos`,
+		respuesta: `El costo de desarrollo varia segun el tipo de este. Landing Page U$100 - U$160. Sitio institucional U$250 - U$500. eCommerce U$300 - U$600. Sistema a medida U$350 - U$5.000.`
+	},
+	{
+		pregunta: `Trabajas internacionalmente`,
+		respuesta: `Si, trabajamos con clientes de todo el mundo.`
+	},
+	{
+		pregunta: `Cuáles son los términos de los pagos`,
+		respuesta: `50% para empezar y 50% en la entrega.`
+	},
+	{
+		pregunta: `Cuánto tiempo toma un desarrollo`,
+		respuesta: `Entre dos semanas y cuatro meses, esto varia segun el tipo de desarrollo.`
+	},
+]
+---
+
+<div>
+	{
+		Items.map((item) => (
+			<div id="faqItem" class="cursor-pointer group p-7 border-b border-white/25 last:border-b-0">
+				<div class="flex justify-between">
+					<h4 class="text-xl ">¿{item.pregunta}?</h4><More class="text-white/70 group-hover:text-white transition-all"></More>
+				</div>
+				<p class="text-white/70 pt-6 hidden transition">{item.respuesta}</p>
+			</div>
+		))
+	}
+</div>
+
+<script>
+	const faqItems = document.querySelectorAll('#faqItem');
+
+	faqItems.forEach(faqItem => {
+		const faqText = faqItem.querySelector('p');
+		const faqIcon = faqItem.querySelector('svg');
+		faqItem.addEventListener('click', () => {
+			faqText.classList.toggle('hidden');
+			faqIcon.classList.toggle('rotate-45');
+		});
+	});
+</script>

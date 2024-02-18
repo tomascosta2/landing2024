@@ -4,7 +4,8 @@ import NextJS from "./icons/NextJS.astro";
 const Projects = [
 	{
 		title: 'Sistema de gestion de subastas',
-		description: 'Desarrollo de un sistema de gestion de subastas de vehiculos.',
+		description: 'Desarrollo de un sistema de gestion de subastas de vehiculos para JMS Autos.',
+		colaboration: 'Entropia',
 		link: '#',
 		github: '#',
 		image: '/imgs/hertz-app-project-screenshot.webp',
@@ -12,7 +13,8 @@ const Projects = [
 	},
 	{
 		title: 'Sitio institucional',
-		description: 'Desarrollo de un sitio institucional auto administrable en Wordpress',
+		description: 'Desarrollo de un sitio institucional auto administrable en Wordpress para Medicentral',
+		colaboration: 'Entropia',
 		link: '#',
 		github: '#',
 		image: '/imgs/medicentral-project-screenshot.webp',
@@ -24,16 +26,17 @@ const Projects = [
 
 <div>
 {
-	Projects.map(({title, description, link, github, image, tags}) => (
-		<article class="relative mb-6 transition rounded overflow-hidden">
-			<img class="shadow-2xl shadow-white/8" src={image} alt="Captura de pantalla del proyecto" />
-			<div class="backdrop-brightness-[15%] p-[30px] size-full absolute top-0 left-0 opacity-0 flex-col gap-3 hover:opacity-100 transition">
+	Projects.map(({title, description, colaboration, link, github, image, tags}) => (
+		<article class="group relative mb-6 transition rounded overflow-hidden hover:scale-[101%]">
+			<img width="740px" height="416.25px" class="shadow-2xl shadow-white/8" src={image} alt="Captura de pantalla del proyecto" />
+			<div class="bg-black group-hover:bg-opacity-75 p-[10px] md:p-[30px] md:pb-[50px] w-full absolute bottom-0 left-0 opacity-0 flex-col gap-3 group-hover:opacity-100 transition">
 				<h3 class="text-xl md:text-3xl font-semibold text-yellow-200">{title}</h3>
 				<p class="text-white/90 my-4">{description}</p>
+				<p class="text-white/50 mb-4">En colaboración con {colaboration}</p>
 				{console.log(tags)}
 				<nav class="flex flex-wrap gap-3">
 					{ tags.map(tag => (
-						<SocialPill>{tag}</SocialPill>
+						<SocialPill class="text-xs md:text-base">{tag}</SocialPill>
 					)) }
 				</nav>
 			</div>
