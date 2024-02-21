@@ -17,18 +17,22 @@ const RequestLink = 'https://api.whatsapp.com/send?phone=542616841853&text=Hola%
 	description="Desarrollamos tu Landing Page, Tienda en linea, Web institucional o Sistema a medida"
 >
 	<main>
-		<section class="w-full lg:w-[740px] mx-auto pt-[180px] gap-4 px-4 lg:px-0">
-			<h1 class="text-white text-4xl lg:text-5xl font-bold text-center pb-8 text-prety">Impulsamos tu negocio con nuestros desarrollos web a medida</h1>
-			<h2 class="text-2xl text-wrap text-center">
-				<span class="opacity-80">Alcanza tus metas con nuestros servicios de </span> 
-				<span class="text-red-200/90">desarrollo especializado</span>
-				<span class="text-yellow-200/90">en crear aplicaciones únicas.</span>
-			</h2>
-			<nav class="flex flex-wrap justify-center gap-4 mt-8">
-				<SocialPill class="cursor-pointer" target="_blank" href={RequestLink}>Solicitar proyecto</SocialPill>
-				<SocialPill class="cursor-pointer" target="_blank" href="https://www.linkedin.com/in/tomas-costa-0517672a5"><LinkedinIcon class="size-5" />LinkedIn</SocialPill>
-				<SocialPill class="cursor-pointer" target="_blank" href="mailto:tomascostapp@gmail.com"><MailIcon class="size-5" />tomascostapp@gmail.com</SocialPill>
-			</nav>
+		<section class="w-full lg:w-[840px] mx-auto pt-[180px] gap-4 px-4 lg:px-0">
+			<h1 class="text-white text-4xl lg:text-5xl font-bold text-center pb-8 text-balance">
+				Impulsa tu negocio con <span class="text-yellow-200/90">nuestros desarrollos web a medida</span>
+			</h1>
+			<div class="lg:w-[740px] mx-auto">
+				<h2 class="text-2xl text-wrap text-center">
+					<span class="opacity-80">Alcanza tus metas con nuestros servicios de </span> 
+					<span class="text-red-200/90">desarrollo especializado</span>
+					<span class="opacity-80">en crear aplicaciones únicas.</span>
+				</h2>
+				<nav class="flex flex-wrap justify-center gap-4 mt-8">
+					<SocialPill class="cursor-pointer" target="_blank" href={RequestLink}>Solicitar proyecto</SocialPill>
+					<SocialPill class="cursor-pointer" target="_blank" href="https://www.linkedin.com/in/tomas-costa-0517672a5"><LinkedinIcon class="size-5" />LinkedIn</SocialPill>
+					<SocialPill class="cursor-pointer" target="_blank" href="mailto:tomascostapp@gmail.com"><MailIcon class="size-5" />tomascostapp@gmail.com</SocialPill>
+				</nav>
+			</div>
 		</section>
 		<section id="experiencia" class="lg:w-[740px] mx-auto px-4 lg:px-0 pt-[120px] gap-4">
 			<h2 class="text-4xl font-bold pb-8 text-center">Experiencia</h2>
@@ -39,7 +43,7 @@ const RequestLink = 'https://api.whatsapp.com/send?phone=542616841853&text=Hola%
 			<Motivos />
 		</section>
 		<section id="proyectos" class="lg:w-[740px] mx-auto px-4 lg:px-0 pt-[120px] gap-4">
-			<h2 class="text-4xl font-bold mb-4 text-center">Hemos trabajado en...</h2>
+			<h2 class="text-4xl font-bold mb-4 text-center">Algunos de <span class="text-red-200/90">nuestros desarrollos</span></h2>
 			<p class="text-center text-white/70 pb-10">
 				Estos son algunos de los proyectos en los que hemos trabajado. Si queres que
 				el tuyo sea el proximo <a class="underline underline-offset-4 hover:text-white" href={RequestLink}>contactanos ahora!</a>!
@@ -48,7 +52,7 @@ const RequestLink = 'https://api.whatsapp.com/send?phone=542616841853&text=Hola%
 		</section>
 		<section class="lg:w-[740px] mx-auto px-4 lg:px-0 pt-[120px] gap-4">
 			<h2 class="text-4xl font-bold mb-4 text-center">Preguntas Frecuentes</h2>
-			<p class="text-center text-white/70 pb-10">Estas son las dudas más comunes entre nuestros clientes, si tenes una duda que no aparece acá no dudes en consultarnos</p>
+			<p class="text-center text-white/70 pb-10">Estas son las dudas más comunes entre nuestros clientes, si tenes una duda que no aparece acá no dudes en contactarnos</p>
 			<Preguntas />
 		</section>
 		<section class="lg:w-[740px] mx-auto px-4 lg:px-0 pt-[120px] gap-4">

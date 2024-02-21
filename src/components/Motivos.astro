@@ -24,6 +24,13 @@ const Motives = [
 		desc: `Diseñamos y desarrollamos el 100% de nuestros sitios para que se adapten
 			a todo tipo de dispositivos.`,
 		img: '/imgs/tomas-costa-desarrollo.png'
+	},
+	{
+		title: 'Valor para nuestros clientes',
+		desc: `Nuestro objetivo es ayudar a nuestros clientes a alcanzar sus 
+			metas mediante un proceso que les ahorra tanto tiempo como dinero 
+			es posible.`,
+		img: '/imgs/tomas-costa-desarrollo.png'
 	}
 ]
 ---
@@ -32,7 +39,7 @@ const Motives = [
 	{
 		Motives.map((motive) => (
 			<div class="flex items-center gap-8 lg:h-[150px] rounded p-4 border border-white/10 bg-gradient-to-br from-neutral-400/5 to-neutral-700/10 hover:from-neutral-100/5 hover:to-neutral-100/5 hover:scale-[101%] transition">
-				<div class="w-[70%]">
+				<div class="w-[90%] md:w-[80%]">
 					<h3 class="mb-2 font-bold text-lg">{motive.title}</h3>
 					<p class="text-white/45">{motive.desc}</p>
 				</div>
