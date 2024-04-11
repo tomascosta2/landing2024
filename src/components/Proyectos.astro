@@ -4,21 +4,21 @@ import NextJS from "./icons/NextJS.astro";
 const Projects = [
 	{
 		title: 'Sistema de gestion de subastas',
-		description: 'Desarrollo de un sistema de gestion de subastas de vehiculos para JMS Autos.',
+		description: 'Desarrollo de un sistema de gestion de subastas de vehiculos para JMS Autos (Subsidiaria de Hertz).',
 		colaboration: 'Entropia',
 		link: '#',
 		github: '#',
-		image: '/imgs/hertz-app-project-screenshot.webp',
+		image: '/imgs/tomas_costa_hertz.webp',
 		tags: [ 'NextJS', 'React', 'Tailwind CSS', 'Supabase' ]
 	},
 	{
-		title: 'Sitio institucional',
-		description: 'Desarrollo de un sitio institucional auto administrable en Wordpress para Medicentral',
-		colaboration: 'Entropia',
+		title: 'IA para generación y administración de contenido para Linkedin',
+		description: 'Desarrollo de una aplicación web para facilitar el proceso de creación de contenido a profesionales en LinkedIn',
+		colaboration: '',
 		link: '#',
 		github: '#',
-		image: '/imgs/medicentral-project-screenshot.webp',
-		tags: [ 'Wordpress', 'Divi' ]
+		image: '/imgs/tomas_costa_sparkinai.webp',
+		tags: [ 'NextJS', 'React', 'Tailwind CSS', 'Supabase' ]
 	}
 ]
 
@@ -32,7 +32,12 @@ const Projects = [
 			<div class="bg-black group-hover:bg-opacity-75 p-[10px] md:p-[30px] md:pb-[50px] w-full absolute bottom-0 left-0 opacity-0 flex-col gap-3 group-hover:opacity-100 transition">
 				<h3 class="text-xl md:text-3xl font-semibold text-yellow-200">{title}</h3>
 				<p class="text-white/90 my-4">{description}</p>
-				<p class="text-white/50 mb-4">En colaboración con {colaboration}</p>
+				{
+					colaboration ? 
+						<p class="text-white/50 mb-4">En colaboración con {colaboration}</p>
+					:
+						''
+				}
 				{console.log(tags)}
 				<nav class="flex flex-wrap gap-3">
 					{ tags.map(tag => (
@@ -43,4 +48,5 @@ const Projects = [
 		</article>
 	))
 }
+<button class="mx-auto mt-8 block opacity-70 hover:opacity-100">Ver más proyectos</button>
 </div>
